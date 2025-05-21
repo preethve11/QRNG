@@ -47,3 +47,12 @@ git clone https://github.com/your-username/quantum-password-generator.git
 cd quantum-password-generator
 pip install -r requirements.txt
 streamlit run app.py  # or flask run if using Flask
+
+
+📂 Project Structure
+quantum-password-generator/
+├── app.py               # Main web app (Streamlit or Flask)
+├── quantum.py           # Quantum API integration
+├── static/              # Cyberpunk CSS & assets
+├── requirements.txt     # Python dependencies
+└── README.md            # Project overview
