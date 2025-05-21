@@ -1,0 +1,128 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Share+Tech+Mono&display=swap');
+
+/* General Styles */
+body {
+    background-color: #0d0d0d; /* Deep black background */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Share Tech Mono', monospace; /* Terminal-like font */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Neon Grid Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 255, 255, 0.1) 0,
+        rgba(0, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 50px
+    );
+    z-index: -1;
+    opacity: 0.1; /* Subtle effect */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ffcc; /* Neon color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Dark track */
+}
+
+/* Button Styles */
+button {
+    background-color: #ff007f; /* Neon pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 127, 1), 0 0 30px rgba(255, 0, 127, 0.5);
+    animation: flicker 0.5s infinite alternate; /* Flickering effect */
+}
+
+/* Flickering Effect */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Dropdown and Radio Button Styles */
+select, input[type="radio"] {
+    background-color: #1a1a1a; /* Dark background */
+    color: #00ffcc; /* Neon cyan */
+    border: 2px solid #00ffcc; /* Neon border */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Share Tech Mono', monospace; /* Terminal-like font */
+    transition: border-color 0.3s ease;
+}
+
+select:hover, input[type="radio"]:hover {
+    border-color: #ff007f; /* Change border color on hover */
+}
+
+/* Password Output Box */
+.password-output {
+    background-color: #1a1a1a; /* Dark background */
+    border: 2px solid #00ffcc; /* Neon border */
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Share Tech Mono', monospace; /* Terminal-like font */
+    color: #00ffcc; /* Neon cyan text */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Copy Button */
+.copy-button {
+    background-color: #00ffcc; /* Neon cyan */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+}
+
+.copy-button:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 204, 1), 0 0 30px rgba(0, 255, 204, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    button, select, input[type="radio"], .copy-button {
+        width: 100%; /* Full width on mobile */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .password-output {
+        font-size: 16px; /* Smaller font size */
+    }
+}
